@@ -14,6 +14,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 extern const std::string validCardSymbols[13] = {
     "2", "3",  "4",    "5",     "6",    "7",  "8",
     "9", "10", "Jack", "Queen", "King", "Ace"};
@@ -29,13 +31,22 @@ public:
    * @param cardSuit
    * @param cardSymbol
    */
-  Card(std::string cardSuit, std::string cardSymbol);
+  Card(string cardSuit, string cardSymbol);
 
   /**
    * @brief Destroy the Card object
    *
    */
   virtual ~Card();
+
+  /**
+   * @brief This method will convert the card object to a logical string. For
+   * example, if the card had a symbol of "Queen" and a suit of "Hearts" we
+   * would call it a "Queen of Hearts"
+   *
+   * @return string
+   */
+  string toString();
 
   // NOTE - Comparison operators
   // When a card is compared, each of the comparison operators below will use
