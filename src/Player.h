@@ -20,7 +20,7 @@ using namespace std;
 class Player {
 public:
   /**
-   * @brief Construct a new Player object
+   * @brief Construct a new Player object and give them a name
    *
    */
   Player(std::string name);
@@ -43,7 +43,7 @@ public:
    * cards will be placed into a player's aside pile
    *
    */
-  void roundWinner(Card card1, Card card2);
+  void onWinRound(Card card1, Card card2);
 
   /**
    * @brief Allow the player to put a card into play. This will remove the card
@@ -72,7 +72,18 @@ public:
    */
   int amountOfCardsPlacedAside();
 
+  /**
+   * @brief Compare two players using their name. This is used by the Game
+   * Manager when handling the round winner.
+   *
+   * @param player
+   * @return true
+   * @return false
+   */
+  bool operator==(const Player player);
+
 private:
+  int uniqueIdentifier;
   Card hand[3];
   vector<Card> aside;
 };
