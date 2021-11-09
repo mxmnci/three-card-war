@@ -37,6 +37,14 @@ public:
    */
   Card drawCard();
 
+  /**
+   * @brief Returns true if the deck of cards is empty
+   *
+   * @return true
+   * @return false
+   */
+  bool isEmpty();
+
 private:
   vector<Card> deck;
 
