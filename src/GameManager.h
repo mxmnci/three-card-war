@@ -25,7 +25,7 @@ public:
    * @brief This method will start the game. In doing so, it will create a
    * shuffled deck of cards and create two players. It will then fill each of
    * the player's empty hands with three cards each. Lastly, it will call the
-   * "drawCard" method to begin the game loop
+   * "playRound" method to begin the game loop
    *
    */
   void start();
